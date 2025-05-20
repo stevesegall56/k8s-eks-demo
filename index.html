@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kubernetes EKS Demo - Steve Segall</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Steve Segall — Kubernetes EKS Demo</h1>
+
+    <p>This page is deployed using a fully containerized workflow on <strong>AWS Elastic Kubernetes Service (EKS)</strong>.</p>
+
+    <h2>What I Did</h2>
+    <ul>
+      <li>🔧 Built a static web page using HTML and CSS</li>
+      <li>🐳 Created a <code>Dockerfile</code> that serves the page using <code>nginx</code></li>
+      <li>📦 Pushed the Docker image to <strong>Docker Hub</strong></li>
+      <li>☸️ Wrote Kubernetes manifests:
+        <ul>
+          <li><code>deployment.yaml</code> to run the Docker container on EKS</li>
+          <li><code>service.yaml</code> to expose it via a LoadBalancer</li>
+        </ul>
+      </li>
+      <li>☁️ Set up an EKS cluster using <code>eksctl</code> and <code>kubectl</code></li>
+      <li>🌐 Pointed a custom domain to the AWS LoadBalancer</li>
+    </ul>
+
+    <h2>Docker Image</h2>
+    <p><a href="https://hub.docker.com/repository/docker/stevesegall/k8s-eks-demo" target="_blank">https://hub.docker.com/repository/docker/stevesegall/k8s-eks-demo</a></p>
+
+    <h2>Source Code</h2>
+    <p><a href="https://github.com/stevesegall56/k8s-eks-demo" target="_blank">GitHub Repo</a></p>
+
+    <h2>Tools Used</h2>
+    <ul>
+      <li>Docker + Docker Hub</li>
+      <li>Kubernetes (kubectl)</li>
+      <li>Amazon EKS (via eksctl)</li>
+      <li>Route53 for DNS</li>
+      <li>PowerShell & Git CLI</li>
+    </ul>
+
+    <p><em>This was built in a single day as part of a project to learn Kubernetes and AWS EKS deployment from scratch.</em></p>
+  </div>
+</body>
+</html>
